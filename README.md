@@ -1,5 +1,10 @@
 # ilocovid19app
 
+this is intended for iloilo covid 19 app patient this
+will include the number of patients with interactive app.
+
+Mobile version will be added soon..
+
 ## Project setup
 ```
 npm install
