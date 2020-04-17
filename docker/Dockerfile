@@ -1,13 +1,16 @@
-FROM node:latest
+FROM node:lts-alpine
 
-WORKDIR ./app
+RUN npm install -g http-server
+
+WORKDIR ./ilocovid19app/
 
 COPY package.json ./
 
-RUN npm install -g
+RUN npm install
 
-COPY ./ ./
+COPY . .
 
-EXPOSE 5000
+RUN npm run build
 
-CMD npm run serve
+EXPOSE 8080
+CMD [ "http-server", "dist" ]
